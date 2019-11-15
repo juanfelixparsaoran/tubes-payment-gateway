@@ -18,4 +18,11 @@ class CreditCardController extends Controller
             'message' => 'Credit Card Created'
         ]);
     }
+
+    function read(){
+        $credit_card = DB::table('credit_card')->get();
+        return response()->json([
+            'data' => $credit_card
+        ]);
+    }
 }
