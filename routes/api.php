@@ -21,7 +21,7 @@ Route::get('/account/read','AccountController@read');
 Route::get('/account/edit/{id}','AccountController@edit');
 Route::get('/account/delete/{id}','AccountController@delete');
 Route::post('/account/update','AccountController@update');
-Route::get('/account/register/{email}/{password}','AccountController@create1');
+Route::post('/account/register','AccountController@create');
 Route::post('/account/auth','AccountController@auth');
 
 Route::get('/history/read','HistoryController@read');
