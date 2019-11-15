@@ -35,5 +35,5 @@ Route::post('/pay/banktransfer','PayController@payVirtualNumber');
 
 Route::post('/cc/create','CreditCardController@create');
 
-Route::get('/payreq/read','PayControllerr@read');
+Route::get('/payreq/read','PayController@read');
 
