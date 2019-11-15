@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\DB;
 class PayController extends Controller
 {
 
+    function read(){
+        $pay_req = DB::table('pay_request')->get();
+        return response()->json([
+            'data' => $pay_req
+        ]);
+    }
+
     function pay(Request $request){
         $account = DB::table('account')->where('secret_key',$request->secret_key)->get();
         if ($account->isEmpty()){
